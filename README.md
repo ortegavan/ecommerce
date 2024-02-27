@@ -47,3 +47,23 @@ Consumo da biblioteca de layout no projeto principal:
 3. Além disso, foi excluído o teste que não passava (fazendo referência a um título que não existe).
 
 Feito isso, `nx lint` e `nx test` foram executados para garantir que o projeto está funcionando corretamente.
+
+## Aula 4
+
+Primeiro, foi estilizado o componente `header`. Em seguida, foram escritos testes unitários para o componente `header`:
+
+```typescript
+it(`should contain title`, () => {
+  const header: HTMLHeadElement = fixture.nativeElement.querySelector('header');
+  expect(header.textContent).toBe('Ecommerce');
+});
+```
+
+E para o componente `app`:
+
+```typescript
+it('should contain header', () => {
+  const header: HTMLElement = fixture.nativeElement.querySelector('header');
+  expect(header).toBeTruthy();
+});
+```
