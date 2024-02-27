@@ -20,9 +20,30 @@ Execução do projeto com o comando:
 nx serve
 ```
 
-<!--
+## Aula 3
+
+Criação da biblioteca de layout com o comando:
+
+```bash
+nx g @nx/angular:library --name=layout --directory=modules/feature/layout --projectNameAndRootFormat=as-provided --standalone=false --style=css
+```
+
 Visualização do gráfico de dependências do projeto com o comando:
 
 ```bash
 nx graph
-``` -->
+```
+
+Criado componente header usando Nx Console a partir da pasta `modules/feature/layout/src/lib` passando as opções `export=true` e `standalone=false`. O comando gerado a partir do Nx Console foi:
+
+```bash
+npx nx generate @nx/angular:component --name=header --directory=header --export=true --standalone=false --nameAndDirectoryFormat=as-provided --no-interactive
+```
+
+Consumo da biblioteca de layout no projeto principal:
+
+1. Importado o módulo `LayoutModule` em `app.component.ts`;
+2. Adicionado o componente `ecommerce-header` em `app.component.html`;
+3. Além disso, foi excluído o teste que não passava (fazendo referência a um título que não existe).
+
+Feito isso, `nx lint` e `nx test` foram executados para garantir que o projeto está funcionando corretamente.
