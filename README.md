@@ -62,8 +62,45 @@ it(`should contain title`, () => {
 E para o componente `app`:
 
 ```typescript
-it('should contain header', () => {
+it(`should contain header`, () => {
   const header: HTMLElement = fixture.nativeElement.querySelector('header');
   expect(header).toBeTruthy();
 });
 ```
+
+## Aula 5
+
+Instalado `husky` + `lint-staged` para rodar `nx lint` e `nx test` antes de cada commit. Seguem comandos:
+
+```bash
+npx husky-init && npm install
+npm install lint-staged
+```
+
+Para configurar:
+
+1. Substituir a instrução `npm test` por `npx lint-staged` no arquivo `.husky/pre-commit`;
+2. Criar um arquivo `.lintstagedrc` na raiz da aplicação com o seguinte conteúdo:
+
+```json
+{
+  "{src,modules}/**/*.{js,ts,jsx,tsx,json,html,css,scss}": [
+    "nx affected:lint --fix --uncommitted",
+    "nx affected:test",
+    "nx format:write --uncommited"
+  ]
+}
+```
+
+3. Adicionar a regra abaixo na seção `rules` do arquivo `eslintrc.base.json` para permitir o uso de `console.warn` e `console.error` no código mas não permitir `console.log`:
+
+```json
+"no-console": [
+    "error",
+    {
+    "allow": ["warn", "error"]
+    }
+],
+```
+
+4. Testar o commit.
