@@ -179,7 +179,11 @@ Rodei o comando abaixo para reformatar todos os arquivos do projeto com o novo e
 nx format:write --all
 ```
 
-Reestilizei o componente `header` e o `app` e apliquei uma nova fonte ao projeto.
+Reestilizei alguns componentes e apliquei uma nova fonte ao projeto:
+
+1. Adicionei a fonte `Montserrat` à `index.html`;
+2. Alterei `modules/feature/layout/src/lib/header/header.component.css`;
+3. Alterei `styles.css`.
 
 Apliquei a tag `v0.0.1-alpha` ao projeto e publiquei em [https://ortegavan.github.io](https://ortegavan.github.io)
 
