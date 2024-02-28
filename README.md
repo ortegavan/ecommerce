@@ -113,4 +113,35 @@ Criado o módulo `product-data-access` com o comando:
 npx nx g @nx/angular:library --name=product-data-access --directory=modules/data-access/product --projectNameAndRootFormat=as-provided
 ```
 
-**Nota**: o componente `product-data-access` foi excluído e removido da `index.ts`.
+O componente `product-data-access` foi excluído e removido da `index.ts`.
+
+**Notas**
+
+Para que o commit funcionasse, precisei alterar na configuração do `lint-staged`:
+
+1. Removi `js` e `css` do `nx lint`;
+2. Acrescentei `--passWithNoTests` no `nx test`.
+
+Criada a model `Product` em `modules/data-access/product/src/lib/models/product.ts`:
+
+```typescript
+export type Product = {
+  createdAt: string;
+  name: string;
+  price: string;
+  description: string;
+  image: string;
+  id: string;
+  quantity: number;
+};
+```
+
+Criado o serviço para busca de produtos com o comando:
+
+```bash
+npx nx g @schematics/angular:service --name=product-search --project=product-data-access --flat=false
+```
+
+Em `src/app/app.config.ts` foi importado o `HttpClient` via `provideHttpClient()`.
+
+Por último, foi implementado o teste através do `HttpClientTestingModule` e `HttpTestingController` para o serviço `ProductSearchService`.
