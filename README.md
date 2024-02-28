@@ -181,7 +181,7 @@ nx format:write --all
 
 Reestilizei alguns componentes e apliquei uma nova fonte ao projeto:
 
-1. Adicionei a fonte `Montserrat` à `index.html`;
+1. Adicionei a fonte [Montserrat](https://fonts.google.com/specimen/Montserrat) na `index.html`;
 2. Alterei `modules/feature/layout/src/lib/header/header.component.css`;
 3. Alterei `styles.css`.
 
