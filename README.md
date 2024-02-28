@@ -181,4 +181,6 @@ nx format:write --all
 
 Reestilizei o componente `header` e o `app` e apliquei uma nova fonte ao projeto.
 
+Apliquei a tag `v0.0.1-alpha` ao projeto e publiquei em [https://ortegavan.github.io](https://ortegavan.github.io)
+
 🌸 Floreei 🌸 este README.md.
