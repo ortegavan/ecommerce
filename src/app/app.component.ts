@@ -11,5 +11,5 @@ import { LayoutModule } from '@ecommerce/layout';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ecommerce';
+  title = 'e-Commerce';
 }

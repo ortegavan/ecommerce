@@ -92,4 +92,15 @@ Para configurar:
 }
 ```
 
-3. Testar o commit.
+3. Adicionar a regra abaixo na seção `rules` do arquivo `eslintrc.base.json` para permitir o uso de `console.warn` e `console.error` no código mas não permitir `console.log`:
+
+```json
+"no-console": [
+    "error",
+    {
+    "allow": ["warn", "error"]
+    }
+],
+```
+
+4. Testar o commit.
