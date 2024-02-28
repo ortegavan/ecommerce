@@ -104,3 +104,13 @@ Para configurar:
 ```
 
 4. Testar o commit.
+
+## Aula 6
+
+Criado o módulo `product-data-access` com o comando:
+
+```bash
+npx nx g @nx/angular:library --name=product-data-access --directory=modules/data-access/product --projectNameAndRootFormat=as-provided
+```
+
+**Nota**: o componente `product-data-access` foi excluído e removido da `index.ts`.
