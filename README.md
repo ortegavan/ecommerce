@@ -1,12 +1,26 @@
-# Ecommerce
+<h2 align="center">
+    Projeto criado na Mentoria Angular Pro
+</h2>
+
+<p align="center">
+    <a href="https://github.com/ortegavan/ecommerce/commits/">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square">
+    </a>
+    <a href="https://github.com/prettier">
+        <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+    </a>   
+    <a href="https://github.com/ortegavan">
+        <img alt="Made with love" src="https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square">
+    </a>
+</p>
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
-## Aula 1
+## ✨ Aula 1
 
 Explicação do escopo do projeto: trata-se de um e-commerce com as funcionalidades de cadastro/login, uma home e um catálogo de produtos. O projeto contempla o front-end desenvolvido em Angular com Nx e o uso de uma API fake disponível no [https://mockapi.io](https://mockapi.io).
 
-## Aula 2
+## ✨ Aula 2
 
 Criação do projeto utilizando o comando:
 
@@ -20,7 +34,7 @@ Execução do projeto com o comando:
 nx serve
 ```
 
-## Aula 3
+## ✨ Aula 3
 
 Criação da biblioteca de layout com o comando:
 
@@ -48,14 +62,15 @@ Consumo da biblioteca de layout no projeto principal:
 
 Feito isso, `nx lint` e `nx test` foram executados para garantir que o projeto está funcionando corretamente.
 
-## Aula 4
+## ✨ Aula 4
 
 Primeiro, foi estilizado o componente `header`. Em seguida, foram escritos testes unitários para o componente `header`:
 
 ```typescript
 it(`should contain title`, () => {
-  const header: HTMLHeadElement = fixture.nativeElement.querySelector('header');
-  expect(header.textContent).toBe('Ecommerce');
+    const header: HTMLHeadElement =
+        fixture.nativeElement.querySelector('header');
+    expect(header.textContent).toBe('Ecommerce');
 });
 ```
 
@@ -63,12 +78,12 @@ E para o componente `app`:
 
 ```typescript
 it(`should contain header`, () => {
-  const header: HTMLElement = fixture.nativeElement.querySelector('header');
-  expect(header).toBeTruthy();
+    const header: HTMLElement = fixture.nativeElement.querySelector('header');
+    expect(header).toBeTruthy();
 });
 ```
 
-## Aula 5
+## ✨ Aula 5
 
 Instalado `husky` + `lint-staged` para rodar `nx lint` e `nx test` antes de cada commit. Seguem comandos:
 
@@ -84,11 +99,11 @@ Para configurar:
 
 ```json
 {
-  "{src,modules}/**/*.{js,ts,jsx,tsx,json,html,css,scss}": [
-    "nx affected:lint --fix --uncommitted",
-    "nx affected:test",
-    "nx format:write --uncommited"
-  ]
+    "{src,modules}/**/*.{js,ts,jsx,tsx,json,html,css,scss}": [
+        "nx affected:lint --fix --uncommitted",
+        "nx affected:test",
+        "nx format:write --uncommited"
+    ]
 }
 ```
 
@@ -105,7 +120,7 @@ Para configurar:
 
 4. Testar o commit.
 
-## Aula 6
+## ✨ Aula 6
 
 Criado o módulo `product-data-access` com o comando:
 
@@ -126,13 +141,13 @@ Criada a model `Product` em `modules/data-access/product/src/lib/models/product.
 
 ```typescript
 export type Product = {
-  createdAt: string;
-  name: string;
-  price: string;
-  description: string;
-  image: string;
-  id: string;
-  quantity: number;
+    createdAt: string;
+    name: string;
+    price: string;
+    description: string;
+    image: string;
+    id: string;
+    quantity: number;
 };
 ```
 
@@ -145,3 +160,25 @@ npx nx g @schematics/angular:service --name=product-search --project=product-dat
 Em `src/app/app.config.ts` foi importado o `HttpClient` via `provideHttpClient()`.
 
 Por último, foi implementado o teste através do `HttpClientTestingModule` e `HttpTestingController` para o serviço `ProductSearchService`.
+
+## 🍺 Pausa para meus ajustes
+
+Alterei meu `.prettierrc` para usar 4 espaços em vez de 2 nas formatações:
+
+```json
+{
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 4
+}
+```
+
+Rodei o comando abaixo para reformatar todos os arquivos do projeto com o novo espaçamento:
+
+```bash
+nx format:write --all
+```
+
+Reestilizei o componente `header` e o `app` e apliquei uma nova fonte ao projeto.
+
+🌸 Floreei 🌸 este README.md.
