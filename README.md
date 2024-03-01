@@ -188,3 +188,53 @@ Reestilizei alguns componentes e apliquei uma nova fonte ao projeto:
 Apliquei a tag `v0.0.1-alpha` ao projeto e publiquei em [https://ortegavan.github.io](https://ortegavan.github.io)
 
 🌸 Floreei 🌸 este README.md.
+
+## ✨ Aula 7
+
+Foi instalado/adicionado ao projeto o Angular Material com os comandos abaixo:
+
+```bash
+npm install @angular/material
+npx nx g @angular/material:ng-add --project=ecommerce
+```
+
+Em seguida, foi criado o módulo Product Search com o comando:
+
+```bash
+npx nx g @nx/angular:library --name=product-search --directory=modules/feature/product/search --projectNameAndRootFormat=as-provided --style=css
+```
+
+Os dados do Data Access foram exportados via `modules/data-access/product/src/lib/index.ts`:
+
+```typescript
+export * from './lib/mocks/product.mock';
+export * from './lib/product-search/product-search.service';
+```
+
+O componente `product-search` foi implementado usando o componente [Autocomplete](https://material.angular.io/components/autocomplete/overview#automatically-highlighting-the-first-option) do Angular Material;
+
+O padrão de composição foi aplicado no componente `header`:
+
+```html
+<header class="header">
+    <h1 class="logo">{{ title }}</h1>
+    <ng-content></ng-content>
+    <ng-content select="[right]"></ng-content>
+</header>
+```
+
+E o componente foi então consumido no `app.component.html`:
+
+```html
+<ecommerce-header title="e-Commerce">
+    <ecommerce-product-search></ecommerce-product-search>
+    <p right>Login</p>
+</ecommerce-header>
+<router-outlet></router-outlet>
+```
+
+Por fim, para os testes rodarem corretamente, foram desabilitadas as animações do Angular Material no `product.search.component.spec.ts`:
+
+```typescript
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+```

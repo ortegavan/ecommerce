@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
     height: 60px;
     padding: 20px;
     background: linear-gradient(to right, rgb(20, 152, 235), rgb(150, 45, 227));
