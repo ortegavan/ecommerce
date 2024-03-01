@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { LayoutModule } from '@ecommerce/layout';
 import { ProductSearchComponent } from '@ecommerce/product-search';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     standalone: true,
@@ -11,6 +12,7 @@ import { ProductSearchComponent } from '@ecommerce/product-search';
         RouterModule,
         LayoutModule,
         ProductSearchComponent,
+        MatIconModule,
     ],
     selector: 'ecommerce-root',
     templateUrl: './app.component.html',

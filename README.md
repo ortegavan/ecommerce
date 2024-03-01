@@ -238,3 +238,9 @@ Por fim, para os testes rodarem corretamente, foram desabilitadas as animações
 ```typescript
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 ```
+
+## 🍺 Pausa para meus ajustes
+
+-   Setei a propriedade `subscriptSizing` do campo de busca para `dynamic` para alinhar o componente verticalmente;
+-   Removi a fonte Roboto da `index.html` porque já havia configurado a Montserrat;
+-   Temporariamente, coloquei um ícone no lugar do texto "Login" no `app.component.html` até definirmos o próximo componente.
