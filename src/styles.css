@@ -6,16 +6,8 @@ body {
 }
 
 body {
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-optical-sizing: auto;
-    font-size: 16px;
-}
-
-html,
-body {
-    height: 100%;
-}
-body {
-    margin: 0;
-    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 14px;
 }
