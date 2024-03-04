@@ -1,10 +1,10 @@
 # Projeto criado na Mentoria Angular Pro
 
-[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular) [![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square)](https://github.com/ortegavan/ecommerce/commits/) [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier) [![Made with love](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square)](https://github.com/ortegavan)
+[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love&style=flat-square)](https://www.github.com/angular/angular) [![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square)](https://github.com/ortegavan/ecommerce/commits/) [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier) [![Made with love](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square)](https://github.com/ortegavan)
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
-** Se este documento for útil para você, considere deixar uma :star: no repositório. **
+Se este documento for útil para você, considere deixar uma :star: no repositório.
 
 ## ✨ Aula 1
 
