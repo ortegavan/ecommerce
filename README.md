@@ -1,20 +1,10 @@
-<h2 align="center">
-    Projeto criado na Mentoria Angular Pro
-</h2>
+# Projeto criado na Mentoria Angular Pro
 
-<p align="center">
-    <a href="https://github.com/ortegavan/ecommerce/commits/">
-        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square">
-    </a>
-    <a href="https://github.com/prettier">
-        <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
-    </a>   
-    <a href="https://github.com/ortegavan">
-        <img alt="Made with love" src="https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square">
-    </a>
-</p>
+[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular) [![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square)](https://github.com/ortegavan/ecommerce/commits/) [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier) [![Made with love](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square)](https://github.com/ortegavan)
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
+
+** Se este documento for útil para você, considere deixar uma :star: no repositório. **
 
 ## ✨ Aula 1
 
@@ -184,8 +174,6 @@ Reestilizei alguns componentes e apliquei uma nova fonte ao projeto:
 1. Adicionei a fonte [Montserrat](https://fonts.google.com/specimen/Montserrat) na `index.html`;
 2. Alterei `modules/feature/layout/src/lib/header/header.component.css`;
 3. Alterei `styles.css`.
-
-Apliquei a tag `v0.0.1-alpha` ao projeto e publiquei em [https://ortegavan.github.io](https://ortegavan.github.io)
 
 🌸 Floreei 🌸 este README.md.
 
