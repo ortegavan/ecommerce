@@ -232,3 +232,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 -   Setei a propriedade `subscriptSizing` do campo de busca para `dynamic` para alinhar o componente verticalmente;
 -   Removi a fonte Roboto da `index.html` porque já havia configurado a Montserrat;
 -   Temporariamente, coloquei um ícone no lugar do texto "Login" no `app.component.html` até definirmos o próximo componente.
+
+## ✨ Aula 8
+
+Foi implementada a busca de produtos no componente `product-search` com o uso do `FormControl` e operadores do RxJS para evitar requisições desnecessárias e foi utilizado pipe async para subscrever o observable no template.
+
+```typescript
+this.products$ = this.control.valueChanges.pipe(
+    debounceTime(333),
+    distinctUntilChanged(),
+    filter((text) => text.length > 1),
+    switchMap((text) => this.productSearchService.searchByName(text))
+);
+```
