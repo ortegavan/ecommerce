@@ -245,3 +245,7 @@ this.products$ = this.control.valueChanges.pipe(
     switchMap((text) => this.productSearchService.searchByName(text))
 );
 ```
+
+## ✨ Aula 9
+
+Foram implementados testes para o componente `product-search` e para o serviço `ProductSearchService`. Utilizamos `FakeAsync` + `tick` para simular o tempo de espera da requisição e usamos spy para verificar se o método `searchByName` foi chamado.
