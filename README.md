@@ -275,3 +275,9 @@ Vimos o lazy loading em ação ao inspecionar a aplicação no navegador:
 ![Lazy loading](src/assets/readme/001.png)
 
 Mais sobre as estratégias de preloading pode ser visto [neste post](https://dev.to/this-is-angular/optimize-your-angular-apps-user-experience-with-preloading-strategies-3ie7).
+
+## ✨ Aula 11
+
+Implementamos a seção de produtos recomendados, por enquanto com mock de dados. Conversamos sobre HTML semântico e a importância de usar tags apropriadas para melhorar a acessibilidade e SEO. Famos sobre o padrão BEM para nomenclatura de classes do CSS.
+
+Mais sobre padrões de acessibilidade pode ser visto [neste link](https://www.w3.org/WAI/ARIA/apg/patterns/).
