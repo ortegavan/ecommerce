@@ -272,6 +272,6 @@ export const appRoutes: Route[] = [
 
 Vimos o lazy loading em ação ao inspecionar a aplicação no navegador:
 
-(![Lazy loading](assets/readme/001.png))
+![Lazy loading](src/assets/readme/001.png)
 
 Mais sobre as estratégias de preloading pode ser visto [neste post](https://dev.to/this-is-angular/optimize-your-angular-apps-user-experience-with-preloading-strategies-3ie7).
