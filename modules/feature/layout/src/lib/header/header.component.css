@@ -7,6 +7,14 @@
     background: linear-gradient(to right, rgb(20, 152, 235), rgb(150, 45, 227));
 }
 
+.header__logo {
+    text-decoration: none;
+}
+
+.header__title {
+    color: #fff;
+}
+
 .logo {
     color: #fff;
 }
