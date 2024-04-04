@@ -249,3 +249,29 @@ this.products$ = this.control.valueChanges.pipe(
 ## ✨ Aula 9
 
 Foram implementados testes para o componente `product-search` e para o serviço `ProductSearchService`. Utilizamos `FakeAsync` + `tick` para simular o tempo de espera da requisição e usamos spy para verificar se o método `searchByName` foi chamado.
+
+## ✨ Aula 10
+
+Nesta aula, criamos o módulo `home` com o comando:
+
+```bash
+nx g @nx/angular:library --name=home --directory=modules/feature/home --lazy=true --routing=true --projectNameAndRootFormat=as-provided --style=css
+```
+
+Discutimos as estratégias de preloading disponíveis no Angular e implementamos o lazy loading do módulo `home`. Aprendi que o lazy loading pode ser configurado usando `loadChildren` apontando para o módulo de rotas:
+
+```typescript
+export const appRoutes: Route[] = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    {
+        path: 'home',
+        loadChildren: () => import('@ecommerce/home').then((r) => r.homeRoutes),
+    },
+];
+```
+
+Vimos o lazy loading em ação ao inspecionar a aplicação no navegador:
+
+(![Lazy loading](assets/readme/001.png))
+
+Mais sobre as estratégias de preloading pode ser visto [neste post](https://dev.to/this-is-angular/optimize-your-angular-apps-user-experience-with-preloading-strategies-3ie7).
