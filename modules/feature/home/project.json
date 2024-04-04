@@ -1,0 +1,9 @@
+{
+    "name": "home",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "modules/feature/home/src",
+    "prefix": "ecommerce",
+    "tags": [],
+    "projectType": "library",
+    "targets": {}
+}
