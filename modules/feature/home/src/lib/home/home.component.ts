@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { mockProducts } from '@ecommerce/product-data-access';
+import { RecommendedProductsService } from '@ecommerce/product-data-access';
 
 @Component({
     selector: 'ecommerce-home',
@@ -11,5 +11,6 @@ import { mockProducts } from '@ecommerce/product-data-access';
     styleUrl: './home.component.css',
 })
 export class HomeComponent {
-    products = mockProducts;
+    recommendService = inject(RecommendedProductsService);
+    products$ = this.recommendService.getProducts();
 }
