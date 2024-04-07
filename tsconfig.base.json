@@ -22,7 +22,8 @@
             ],
             "@ecommerce/product-search": [
                 "modules/feature/product/search/src/index.ts"
-            ]
+            ],
+            "@ecommerce/product-ui": ["modules/ui/product/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

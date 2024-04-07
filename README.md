@@ -281,3 +281,7 @@ Mais sobre as estratégias de preloading pode ser visto [neste post](https://dev
 Implementamos a seção de produtos recomendados, por enquanto com mock de dados. Conversamos sobre HTML semântico e a importância de usar tags apropriadas para melhorar a acessibilidade e SEO. Famos sobre o padrão BEM para nomenclatura de classes do CSS.
 
 Mais sobre padrões de acessibilidade pode ser visto [neste link](https://www.w3.org/WAI/ARIA/apg/patterns/).
+
+## ✨ Aula 12
+
+Criamos o serviço de produtos recomendados agora buscando da API (antes usávamos mock) e refatoramos a home para separar o código responsável pelo card de produto.
