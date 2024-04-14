@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,6 +20,7 @@ import { Product } from 'modules/data-access/product/src/lib/models/product.mode
     standalone: true,
     imports: [
         CommonModule,
+        RouterLink,
         MatAutocompleteModule,
         MatInputModule,
         MatFormFieldModule,
