@@ -103,8 +103,7 @@ Para configurar:
 
 ```json
 "no-console": [
-    "error",
-    {
+    "error", {
         "allow": ["warn", "error"]
     }
 ],
