@@ -4,6 +4,8 @@
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
+Em aula, os mentores utilizam `scss`. Eu optei por usar `css` por ter mais prática com ele. Os scripts do Nx que criam libs com `scss`, na mentoria, foram alterados aqui para `css`.
+
 Se este documento for útil para você, considere deixar uma :star: no repositório.
 
 ## ✨ Aula 1
@@ -285,3 +287,25 @@ Mais sobre padrões de acessibilidade pode ser visto [neste link](https://www.w3
 ## ✨ Aula 12
 
 Criamos o serviço de produtos recomendados agora buscando da API (antes usávamos mock) e refatoramos a home para separar o código responsável pelo card de produto.
+
+## ✨ Aula 13
+
+Criamos a lib para exibir os detalhes de um produto com o comando:
+
+```bash
+npx nx g @nx/angular:library --name=product-detail --directory=modules/feature/product/detail --lazy=true --routing=true --projectNameAndRootFormat=as-provided --style=css
+```
+
+Habilitamos a captura de parâmetros através de input no componente adicionando a função `withComponentInputBinding` no `app.config.ts`:
+
+```typescript
+export const appConfig: ApplicationConfig = {
+    providers: [
+        provideRouter(appRoutes, withComponentInputBinding()),
+        provideHttpClient(),
+        provideAnimationsAsync(),
+    ],
+};
+```
+
+Para os testes passarem, foi necessário adicionar o `RouterTestingModule` em `product-detail.component.spec.ts`.

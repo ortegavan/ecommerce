@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { getParams } from './get-params';
 
 @Component({
     selector: 'ecommerce-product-detail',
@@ -8,4 +9,6 @@ import { CommonModule } from '@angular/common';
     templateUrl: './product-detail.component.html',
     styleUrl: './product-detail.component.css',
 })
-export class ProductDetailComponent {}
+export class ProductDetailComponent {
+    id$ = getParams();
+}
