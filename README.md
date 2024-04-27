@@ -350,3 +350,13 @@ Para aplicar as regras, precisamos dos dois passos:
 ```
 
 Mais sobre _module boundaries_ pode ser visto [neste link](https://nx.dev/features/enforce-module-boundaries) e [neste link](https://andrewrosario.medium.com/definindo-limites-de-módulos-no-nx-com-module-boundaries-4088f758957f).
+
+## ✨ Aula 15
+
+Criamos um pipe customizado e vimos a diferença entre um pipe puro e um pipe impuro. O pipe customizado foi criado com o comando:
+
+```bash
+nx g @nx/angular:pipe --name=quantity-description --directory=modules/feature/product/detail/src/lib/pipes/quantity-description --nameAndDirectoryFormat=as-provided
+```
+
+Vimos a importância de utilizar o pipe em vez de chamar funções diretamente no template pois o change detection do Angular é mais eficiente. Mais sobre pipes pode ser visto [neste link](https://andrewrosario.medium.com/angular-pipes-uma-visão-mais-profunda-69e2413c34d8).
