@@ -1,0 +1,8 @@
+.product-detail {
+    padding: 20px;
+}
+
+.product-detail__section {
+    display: flex;
+    gap: 10px;
+}
