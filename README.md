@@ -308,3 +308,45 @@ export const appConfig: ApplicationConfig = {
 ```
 
 Para os testes passarem, foi necessário adicionar o `RouterTestingModule` em `product-detail.component.spec.ts`.
+
+## ✨ Aula 14
+
+Implementamos _module boundaries_ para garantir as regras:
+
+-   `type:data-access` deve ser capaz de importar de `type:data-access`;
+-   `type:feature` deve ser capaz de importar de `type:feature`, `type:ui` e `type:data-access`;
+-   `type:ui` deve ser capaz de importar de `type:ui` e `type:data-access`
+
+Para aplicar as regras, precisamos dos dois passos:
+
+1. Atribuir um identificador às nossas libs. Isso é feito adicionando-se tags no arquivo `project.json` (exemplo abaixo para a lib `product-data-access`):
+
+```json
+"tags": ["type:data-access"]
+```
+
+2. Definir as regras de importação no arquivo `.eslintrc.base.json` no array `depConstraints` do plugin `@nx/enforce-module-boundaries`:
+
+```json
+{
+    "sourceTag": "type:data-access",
+    "onlyDependOnLibsWithTags": ["type:data-access"]
+},
+{
+    "sourceTag": "type:feature",
+    "onlyDependOnLibsWithTags": [
+        "type:feature",
+        "type:ui",
+        "type:data-access"
+    ]
+},
+{
+    "sourceTag": "type:ui",
+    "onlyDependOnLibsWithTags": [
+        "type:ui",
+        "type:data-access"
+    ]
+}
+```
+
+Mais sobre _module boundaries_ pode ser visto [neste link](https://nx.dev/features/enforce-module-boundaries) e [neste link](https://andrewrosario.medium.com/definindo-limites-de-módulos-no-nx-com-module-boundaries-4088f758957f).
