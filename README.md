@@ -360,3 +360,43 @@ nx g @nx/angular:pipe --name=quantity-description --directory=modules/feature/pr
 ```
 
 Vimos a importância de utilizar o pipe em vez de chamar funções diretamente no template pois o change detection do Angular é mais eficiente. Mais sobre pipes pode ser visto [neste link](https://andrewrosario.medium.com/angular-pipes-uma-visão-mais-profunda-69e2413c34d8).
+
+## ✨ Aula 16
+
+Criamos um interceptor para tratar erros nas requisições HTTP. O interceptor foi criado com o comando:
+
+```bash
+nx g @schematics/angular:interceptor --name=http-errors --project=ecommerce --flat=false --path=src/app/interceptors
+```
+
+Utilizamos o snack bar do Angular Material para exibir mensagens de erro ao usuário. O código final do interceptor ficou assim:
+
+```typescript
+export const httpErrorsInterceptor: HttpInterceptorFn = (req, next) => {
+    const snackBar = inject(MatSnackBar);
+
+    return next(req).pipe(
+        catchError((err) => {
+            snackBar.open('Ops, ocorreu um erro', 'Fechar', {
+                duration: 5000,
+            });
+
+            return throwError(() => err);
+        })
+    );
+};
+```
+
+No teste do interceptor, forçamos um erro na requisição e verificamos se o snack bar foi chamado:
+
+```typescript
+it('should open notification on http error', () => {
+    jest.spyOn(snackBar, 'open');
+    httpClient.get('/test').subscribe();
+
+    const request = httpMock.expectOne('/test');
+    request.error(new ProgressEvent('error'));
+
+    expect(snackBar.open).toHaveBeenCalled();
+});
+```
