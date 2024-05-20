@@ -400,3 +400,38 @@ it('should open notification on http error', () => {
     expect(snackBar.open).toHaveBeenCalled();
 });
 ```
+
+## ✨ Aula 17
+
+Discutimos sobre gerenciamento de estado e falamos sobre as libs disponíveis no mercado para isso no Angular. No entanto, concordamos que na maioria das vezes é possível gerenciar o estado apenas com RxJS ou Signals, fugindo da complexidade que estas libs trazem.
+
+Criamos uma service para gerenciar o estado do carrinho de compras com o comando:
+
+```bash
+nx g @schematics/angular:service --name=cart --project=product-data-access --flat=false --path=modules/data-access/product/src/lib/state
+```
+
+E, nesta service, implementamos o gerenciamento de estado a) primeiro com RxJS:
+
+```typescript
+private cartSubject$ = new BehaviorSubject<Product[]>([]);
+cart$ = this.cartSubject$.asObservable();
+quantity$ = this.cart$.pipe(map((products) => products.length));
+
+addToCart(product: Product) {
+    const cart = this.cartSubject$.getValue();
+    this.cartSubject$.next([...cart, product]);
+}
+```
+
+b) e depois com Signals:
+
+```typescript
+private cartSignal = signal<Product[]>([]);
+cart = this.cartSignal.asReadonly();
+quantity = computed(() => this.cart().length);
+
+addToCart(product: Product) {
+    this.cartSignal.update((cart) => [...cart, product]);
+}
+```
