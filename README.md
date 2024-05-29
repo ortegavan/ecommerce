@@ -435,3 +435,7 @@ addToCart(product: Product) {
     this.cartSignal.update((cart) => [...cart, product]);
 }
 ```
+
+## ✨ Aula 18
+
+Criamos o componente `CartComponent` para exibir a quantidade de itens no carrinho usando o Badge do Angular Material. Para termos acesso ao estado do carrinho, utilizamos o serviço `CartService` com o signal já implementado anteriormente. O componente foi, então, consumido em `app.component.html`.
