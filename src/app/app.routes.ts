@@ -13,4 +13,11 @@ export const appRoutes: Route[] = [
                 (r) => r.productDetailRoutes
             ),
     },
+    {
+        path: 'cart',
+        loadComponent: () =>
+            import('@ecommerce/product-cart').then(
+                (r) => r.ProductCartComponent
+            ),
+    },
 ];
