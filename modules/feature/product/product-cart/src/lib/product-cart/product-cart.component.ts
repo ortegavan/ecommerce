@@ -1,6 +1,6 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartService } from '@ecommerce/product-data-access';
+import { CartService, Product } from '@ecommerce/product-data-access';
 import { ItemCartComponent } from '@ecommerce/product-ui';
 
 @Component({
@@ -12,5 +12,9 @@ import { ItemCartComponent } from '@ecommerce/product-ui';
 })
 export class ProductCartComponent {
     cartService = inject(CartService);
-    products = this.cartService.cart();
+    products = this.cartService.cart;
+
+    remove(product: Product) {
+        this.cartService.removeFromCart(product);
+    }
 }
