@@ -17,6 +17,9 @@
         "paths": {
             "@ecommerce/home": ["modules/feature/home/src/index.ts"],
             "@ecommerce/layout": ["modules/feature/layout/src/index.ts"],
+            "@ecommerce/product-cart": [
+                "modules/feature/product/product-cart/src/index.ts"
+            ],
             "@ecommerce/product-data-access": [
                 "modules/data-access/product/src/index.ts"
             ],

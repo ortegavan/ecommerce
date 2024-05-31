@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'ecommerce-cart',
@@ -13,4 +14,10 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class CartComponent {
     @Input() quantity = 0;
+
+    router = inject(Router);
+
+    public openCart(): void {
+        this.router.navigate(['/cart']);
+    }
 }

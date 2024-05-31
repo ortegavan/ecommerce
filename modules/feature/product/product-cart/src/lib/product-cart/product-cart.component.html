@@ -1,0 +1,10 @@
+<section>
+    @for (product of products(); track product.id) {
+    <ecommerce-item-cart
+        [product]="product"
+        (remove)="remove($event)"
+    ></ecommerce-item-cart>
+    } @empty {
+    <p>No products in the cart.</p>
+    }
+</section>

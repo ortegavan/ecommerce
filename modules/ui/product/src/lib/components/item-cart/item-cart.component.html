@@ -1,0 +1,31 @@
+<div class="product-cart">
+    <div class="product-cart__image">
+        <img src="{{ product.image }}" alt="{{ product.name }}" />
+    </div>
+    <div class="product-cart__info">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+    </div>
+    <div></div>
+    <div>
+        <p>
+            {{ product.price | currency : 'BRL' }}
+        </p>
+    </div>
+    <!-- <div class="product-cart_update">
+        <button mat-icon-button (click)="decrement(product.id)">
+            <mat-icon>remove</mat-icon>
+        </button>
+        <p>
+            quantidade aqui
+        </p>
+        <button mat-icon-button (click)="increment(product.id)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div> -->
+    <div class="product-cart__remove">
+        <button mat-icon-button (click)="remove.emit(product)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>

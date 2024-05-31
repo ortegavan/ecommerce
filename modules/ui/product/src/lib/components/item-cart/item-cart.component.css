@@ -1,0 +1,22 @@
+.product-cart {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-cart > div {
+    flex: 1;
+}
+
+.product-cart_update {
+    display: flex;
+    gap: 10px;
+}
+
+.product-cart__image img {
+    max-width: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+}
