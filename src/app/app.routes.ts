@@ -20,4 +20,9 @@ export const appRoutes: Route[] = [
                 (r) => r.ProductCartComponent
             ),
     },
+    {
+        path: 'auth',
+        loadChildren: () =>
+            import('@ecommerce/auth-form').then((r) => r.authFormRoutes),
+    },
 ];

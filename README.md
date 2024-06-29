@@ -443,3 +443,23 @@ Criamos o componente `CartComponent` para exibir a quantidade de itens no carrin
 ## ✨ Aula 19
 
 Criado primeiro script de integração contínua disponível em `.github/workflows/ci.yml` que executa formatação, lint e testes no projeto a cada push na `main` ou novo pull request.
+
+## ✨ Aula 20
+
+Configuramos uma conta na Vercel e importamos o projeto do GitHub para a plataforma. A partir de agora, o deploy será feito automaticamente a cada push na branch `main`.
+
+Também criamos a nova lib que será usada para construir o formulário para autenticação do usuário:
+
+```bash
+npx nx g @nx/angular:library --name=auth-form --directory=modules/feature/auth/form --lazy=true --routing=true --projectNameAndRootFormat=as-provided --style=css --tags=type:feature
+```
+
+E adicionamos nova rota no `appRoutes` para o módulo de autenticação:
+
+```typescript
+{
+    path: 'auth',
+    loadChildren: () =>
+        import('@ecommerce/auth-form').then((r) => r.authFormRoutes),
+},
+```
