@@ -1,6 +1,6 @@
 # Projeto criado na Mentoria Angular Pro
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce?style=flat-square)](https://github.com/ortegavan/ecommerce/commits/) [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier) [![Tags](https://img.shields.io/github/v/tag/ortegavan/ecommerce?style=flat-square&color=ff69b4)](https://github.com/ortegavan/ecommerce/tags) [![Made with love](https://img.shields.io/badge/made%20with%20%E2%99%A5%20by-ortegavan-ff69b4.svg?style=flat-square)](https://github.com/ortegavan)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ortegavan/ecommerce/ci.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce) ![GitHub Tag](https://img.shields.io/github/v/tag/ortegavan/ecommerce) ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/ortegavan_ecommerce?server=https%3A%2F%2Fsonarcloud.io) ![Static Badge](https://img.shields.io/badge/code_style-prettier-ff69b4)
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
@@ -463,3 +463,5 @@ E adicionamos nova rota no `appRoutes` para o módulo de autenticação:
         import('@ecommerce/auth-form').then((r) => r.authFormRoutes),
 },
 ```
+
+## ✨ Aula 21
