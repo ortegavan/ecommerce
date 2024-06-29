@@ -465,3 +465,11 @@ E adicionamos nova rota no `appRoutes` para o módulo de autenticação:
 ```
 
 ## ✨ Aula 21
+
+Começamos a construir um formulário reativo em etapas utilizando um componente como orquestrador tendo seu próprio `router-outlet`. Cada etapa do formulário é um componente filho separado com rotas configuradas no arquivo `lib.routes.ts` da lib de autenticação.
+
+Os componentes filhos conseguem acessar o componente pai via injeção de dependência (sim, de componentes!) e, assim, compartilhar informações entre si. Para saber mais, acesse [este link](https://angular.dev/guide/di/hierarchical-dependency-injection).
+
+Para cenários mais genéricos, é possível criar uma classe abstrata que os orquestradores implementam para serem injetadas nos componentes filhos. Para saber mais, acesse [este link](https://netbasal.com/create-a-multi-step-form-in-angular-44cdc5b75cdc).
+
+Formulários complexos também podem ser divididos com [ControlContainer](https://andrewrosario.medium.com/dividindo-formulários-complexos-no-angular-com-controlcontainer-1b107d59c8be) e com [ControlValueAccessor](https://andrewrosario.medium.com/form-controls-customizados-no-angular-com-controlvalueaccessor-367e773e3fec).
