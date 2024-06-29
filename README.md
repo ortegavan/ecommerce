@@ -1,6 +1,6 @@
 # Projeto criado na Mentoria Angular Pro
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ortegavan/ecommerce/ci.yml) ![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce) ![GitHub Tag](https://img.shields.io/github/v/tag/ortegavan/ecommerce) ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/ortegavan_ecommerce?server=https%3A%2F%2Fsonarcloud.io) ![Static Badge](https://img.shields.io/badge/code_style-prettier-ff69b4)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ortegavan/ecommerce/ci.yml) ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/ortegavan_ecommerce?server=https%3A%2F%2Fsonarcloud.io) ![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce) ![GitHub Tag](https://img.shields.io/github/v/tag/ortegavan/ecommerce) ![Static Badge](https://img.shields.io/badge/code_style-prettier-ff69b4)
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
@@ -473,3 +473,27 @@ Os componentes filhos conseguem acessar o componente pai via injeção de depend
 Para cenários mais genéricos, é possível criar uma classe abstrata que os orquestradores implementam para serem injetadas nos componentes filhos. Para saber mais, acesse [este link](https://netbasal.com/create-a-multi-step-form-in-angular-44cdc5b75cdc).
 
 Formulários complexos também podem ser divididos com [ControlContainer](https://andrewrosario.medium.com/dividindo-formulários-complexos-no-angular-com-controlcontainer-1b107d59c8be) e com [ControlValueAccessor](https://andrewrosario.medium.com/form-controls-customizados-no-angular-com-controlvalueaccessor-367e773e3fec).
+
+## ✨ Aula 22
+
+Finalizamos o formulário iniciado na aula anterior e implementamos os testes. Foi necessário fornecer rotas com `provideRouter` e importar o `NoopAnimationsModule` para os testes passarem. Para testarmos a interação com o HTML do form, substituímos a manipulação do `FormControl` como mostrado a seguir:
+
+```typescript
+it('should display email error message', () => {
+    // component.control.setValue('teste');
+    const input: HTMLInputElement =
+        fixture.nativeElement.querySelector('input');
+    input.value = 'teste';
+    input.dispatchEvent(new Event('input'));
+
+    component.control.markAllAsTouched();
+    fixture.detectChanges();
+    const error = fixture.nativeElement.querySelector(
+        '[data-testid="error-email"]'
+    );
+
+    expect(error).toBeTruthy();
+});
+```
+
+Onde `data-testid` é um atributo customizado que usamos para identificar elementos no HTML.
