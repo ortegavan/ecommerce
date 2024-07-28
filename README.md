@@ -497,3 +497,17 @@ it('should display email error message', () => {
 ```
 
 Onde `data-testid` é um atributo customizado que usamos para identificar elementos no HTML.
+
+## ✨ Aula 23
+
+Criamos uma nova lib para gerenciar autenticação com o comando:
+
+```bash
+nx g @nx/angular:library --name=auth-data-access --directory=modules/data-access/auth --projectNameAndRootFormat=as-provided --standalone=false --tags=type:data-access
+```
+
+Criamos uma nova service para armazenar o estado de autenticação com o comando:
+
+```bash
+npx nx g @schematics/angular:service --name=auth --project=auth-data-access --flat=false
+```
