@@ -511,3 +511,5 @@ Criamos uma nova service para armazenar o estado de autenticação com o comando
 ```bash
 npx nx g @schematics/angular:service --name=auth --project=auth-data-access --flat=false
 ```
+
+Criamos a função `authGuard` para ser utilizada como guarda da rota de login que redireciona para a home caso o usuário já esteja autenticado ou retorna `true` no `canActivate` caso contrário, permitindo o acesso à tela de autenticação.
