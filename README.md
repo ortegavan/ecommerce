@@ -513,3 +513,7 @@ npx nx g @schematics/angular:service --name=auth --project=auth-data-access --fl
 ```
 
 Criamos a função `authGuard` para ser utilizada como guarda da rota de login que redireciona para a home caso o usuário já esteja autenticado ou retorna `true` no `canActivate` caso contrário, permitindo o acesso à tela de autenticação.
+
+## ✨ Aula 24
+
+Criamos, implementamos alguns casos de uso e escrevemos testes para a diretiva `Log`. Mais sobre diretivas pode ser visto [neste link](https://andrewrosario.medium.com/desmistificando-as-poderosas-diretivas-no-angular-ad2c3840a712) e [neste link](https://andrewrosario.medium.com/injetando-componentes-no-angular-através-de-diretivas-cae90992e83).
