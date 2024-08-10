@@ -1,12 +1,14 @@
 <ecommerce-header title="e-Commerce">
     <ecommerce-product-search></ecommerce-product-search>
     <div right class="right-content">
-        <mat-icon
-            aria-hidden="false"
-            aria-label="Example home icon"
-            fontIcon="account_circle"
-            class="white"
-        ></mat-icon>
+        <a routerLink="/auth">
+            <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="account_circle"
+                class="white"
+            ></mat-icon>
+        </a>
         <ecommerce-cart [quantity]="quantity()"></ecommerce-cart>
     </div>
 </ecommerce-header>
