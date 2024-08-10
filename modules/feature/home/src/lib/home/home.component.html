@@ -4,7 +4,7 @@
 
         <div class="product-card-container">
             @for (product of products$ | async; track product.id) {
-            <ecommerce-product-card [product]="product" />
+            <ecommerce-product-card [product]="product" ecommerceLog />
             } @empty {
             <strong
                 >Não temos produtos recomendados para você por enquanto.</strong
