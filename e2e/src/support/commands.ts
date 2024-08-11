@@ -1,35 +1,43 @@
-// /// <reference types="cypress" />
+/// <reference types="cypress" />
 
-// // ***********************************************
-// // This example commands.ts shows you how to
-// // create various custom commands and overwrite
-// // existing commands.
-// //
-// // For more comprehensive examples of custom
-// // commands please read more here:
-// // https://on.cypress.io/custom-commands
-// // ***********************************************
+// ***********************************************
+// This example commands.ts shows you how to
+// create various custom commands and overwrite
+// existing commands.
+//
+// For more comprehensive examples of custom
+// commands please read more here:
+// https://on.cypress.io/custom-commands
+// ***********************************************
 
-// // eslint-disable-next-line @typescript-eslint/no-namespace
-// declare namespace Cypress {
-//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-//   interface Chainable<Subject> {
-//     login(email: string, password: string): void;
-//   }
-// }
+// eslint-disable-next-line @typescript-eslint/no-namespace
+declare namespace Cypress {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    interface Chainable<Subject> {
+        login(email: string, password: string): void;
+    }
+}
 
-// // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => {
-//   console.log('Custom command example: Login', email, password);
-// });
-// //
-// // -- This is a child command --
-// // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-// //
-// //
-// // -- This is a dual command --
-// // Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-// //
-// //
-// // -- This will overwrite an existing command --
-// // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// -- This is a parent command --
+Cypress.Commands.add('login', (email: string, password: string) => {
+    cy.get('a').find('mat-icon[fontIcon="account_circle"]').click();
+
+    cy.get('input[type="email"]').type(email);
+
+    cy.get('button').contains('Próximo').click();
+
+    cy.get('input[type="password"]').type(password);
+
+    cy.get('button').contains('Entrar').click();
+});
+//
+// -- This is a child command --
+// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })

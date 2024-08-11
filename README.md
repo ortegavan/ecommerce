@@ -517,3 +517,27 @@ Criamos a função `authGuard` para ser utilizada como guarda da rota de login q
 ## ✨ Aula 24
 
 Criamos, implementamos alguns casos de uso e escrevemos testes para a diretiva `Log`. Mais sobre diretivas pode ser visto [neste link](https://andrewrosario.medium.com/desmistificando-as-poderosas-diretivas-no-angular-ad2c3840a712) e [neste link](https://andrewrosario.medium.com/injetando-componentes-no-angular-através-de-diretivas-cae90992e83).
+
+## ✨ Aula 25
+
+Implementamos alguns testes E2E com Cypress. Rodamos o Cypress em modo headless com o comando:
+
+```bash
+nx e2e e2e
+```
+
+Rodamos Cypress via interface gráfica com o comando:
+
+```bash
+npx cypress open --project ./e2e
+```
+
+Obs. 1: o parâmetro `--watch` foi descontinuado.
+
+Obs. 2: precisei reconfigurar o `tsconfig.json` do Cypress para que o TypeScript reconhecesse os tipos do Cypress.
+
+Alteramos o workflow de CI para executar os testes E2E adicionando o comando a seguir:
+
+```yml
+- run: npx nx affected -t e2e --parallel=3 --configuration=ci
+```

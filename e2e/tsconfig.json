@@ -4,7 +4,11 @@
         "allowJs": true,
         "outDir": "../dist/out-tsc",
         "module": "commonjs",
-        "types": ["cypress", "node"],
+        "types": ["cypress"],
+        "baseUrl": "./",
+        "paths": {
+            "@support/*": ["support/*"]
+        },
         "sourceMap": false,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
@@ -13,12 +17,5 @@
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": [
-        "**/*.ts",
-        "**/*.js",
-        "cypress.config.ts",
-        "**/*.cy.ts",
-        "**/*.cy.js",
-        "**/*.d.ts"
-    ]
+    "include": ["src/**/*.ts", "src/**/*.cy.ts", "support/**/*.ts"]
 }
