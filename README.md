@@ -1,6 +1,6 @@
 # Projeto criado na Mentoria Angular Pro
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ortegavan/ecommerce/ci.yml) ![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/ortegavan_ecommerce?server=https%3A%2F%2Fsonarcloud.io) ![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce) ![GitHub Tag](https://img.shields.io/github/v/tag/ortegavan/ecommerce) ![Static Badge](https://img.shields.io/badge/code_style-prettier-ff69b4)
+![GitHub last commit](https://img.shields.io/github/last-commit/ortegavan/ecommerce) ![GitHub Tag](https://img.shields.io/github/v/tag/ortegavan/ecommerce) ![Static Badge](https://img.shields.io/badge/code_style-prettier-ff69b4)
 
 Este documento contém os exercícios feitos em aula + minhas notas pessoais sobre a Mentoria Angular Pro de Paolo Almeida e Andrew Rosário.
 
